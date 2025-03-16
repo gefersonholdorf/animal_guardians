@@ -1,0 +1,40 @@
+Sprint 1 - Configuração Inicial e Autenticação (1 semana)
+1.1 - Configurar estrutura do projeto NestJS com DDD e SOLID
+1.2 - Configurar Prisma e conexão com banco de dados
+1.3 - Criar entidades principais (Usuário, Denúncia, Moderador, ONG)
+1.4 - Implementar autenticação com JWT (Login, Cadastro, Middleware de Proteção)
+1.5 - Implementar confirmação de e-mail com Nodemailer
+
+Entrega: API funcional com cadastro/login e autenticação JWT
+
+Sprint 2 - Denúncias e Upload de Arquivos (1 semana)
+2.1 - Criar CRUD de denúncias (Cadastro, Edição, Exclusão, Listagem)
+2.2 - Implementar upload de imagens/vídeos com Multer
+2.3 - Criar relacionamento entre Usuário e Denúncia (1-N)
+2.4 - Criar endpoint para usuários visualizarem suas denúncias
+
+Entrega: Denúncias podem ser cadastradas com arquivos anexados
+
+Sprint 3 - Moderação e Permissões (1 semana)
+3.1 - Criar fluxo de aprovação/rejeição de denúncias pelos moderadores
+3.2 - Implementar envio de e-mail ao usuário sobre o status da denúncia
+3.3 - Criar middleware de permissões (Usuário comum, Moderador, ONG)
+3.4 - Criar painel para moderadores gerenciarem denúncias
+
+Entrega: Sistema funcional para moderação e comunicação via e-mail
+
+Sprint 4 - Dashboard para ONGs e Performance (1 semana)
+4.1 - Criar dashboard para ONGs e autoridades verem denúncias aprovadas
+4.2 - Implementar cache com Redis para otimizar consultas
+4.3 - Criar sistema de filtros e paginação para listagem de denúncias
+4.4 - Criar logs de auditoria para ações dos moderadores
+
+Entrega: Painel de acompanhamento de denúncias aprovado e sistema otimizado
+
+Sprint 5 - Testes, Segurança e Deploy (1 semana)
+5.1 - Implementar testes unitários e E2E com Vitest
+5.2 - Criar validações e sanitização de dados na entrada da API
+5.3 - Configurar deploy do sistema (Docker, CI/CD, Ambiente de Produção)
+5.4 - Documentar API com Swagger
+
+Entrega: Sistema pronto para produção, testado e documentado
