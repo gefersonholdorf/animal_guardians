@@ -1,4 +1,4 @@
-import { BadRequestException, Body, ConflictException, Controller, HttpCode, Post, UsePipes } from "@nestjs/common";
+import { BadRequestException, Body, ConflictException, Controller, Get, HttpCode, Post, Req, UseGuards, UsePipes } from "@nestjs/common";
 import { RegisterUseCase } from "src/domain/report/application/use-cases/register-use-case";
 import { z } from "zod";
 import { ZodValidationPipe } from "../pipes/zop-validation-.pipe";

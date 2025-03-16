@@ -2,7 +2,7 @@ import { UniqueEntityId } from "src/core/entities/unique-entity-id";
 import { User, type UserProps } from "src/domain/report/enterprises/entities/user";
 
 export function makeUser(
-    override: Partial<UserProps>,
+    override?: Partial<UserProps>,
     id?: UniqueEntityId
 ) {
     const user = User.create({

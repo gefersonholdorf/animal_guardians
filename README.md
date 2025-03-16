@@ -9,12 +9,12 @@ Maus-tratos contra animais são uma realidade comum, mas muitas vezes as denúnc
 ## Requisitos Funcionais
 - RF-01 - Cadastro de Usuários
   
-  - [ ] - O sistema deve permitir o cadastro de usuários comuns e moderadores
-  - [ ] - O cadastro deve exigir nome, e-mail, senha e telefone
+  - [X] - O sistema deve permitir o cadastro de usuários comuns e moderadores
+  - [X] - O cadastro deve exigir nome, e-mail, senha e telefone
   - [ ] - O usuário deve receber um e-mail de confirmação após o cadastro
         
 - RF-02 - Autenticação e Autorizacão
-  - [ ] - O sistema deve permitir login via JWT
+  - [X] - O sistema deve permitir login via JWT
   - [ ] - Moderadores e ONGs terão permissões diferenciadas
 
 - RF-03 - Cadastro de Denúncias

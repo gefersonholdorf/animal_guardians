@@ -5,7 +5,7 @@ import { EnvService } from "../env/env.service";
 import { AuthGuard } from "./auth-guard";
 
 @Module({
-    imports: [JwtModule.registerAsync({
+    imports: [EnvModule, JwtModule.registerAsync({
         imports: [EnvModule],
         inject: [EnvService],
         global: true,
@@ -19,8 +19,8 @@ import { AuthGuard } from "./auth-guard";
                 }
             }
         }
-    }), EnvModule],
-    providers: [AuthGuard],
-    exports: [AuthGuard, JwtModule]
+    })],
+    providers: [],
+    exports: [JwtModule]
 })
 export class AuthModule{}
