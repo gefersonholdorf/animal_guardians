@@ -10,7 +10,7 @@ export interface UserProps {
     email: string
     password: string
     phone: string
-    role: RoleUser
+    role?: RoleUser
 }
 
 export class User extends Entity<UserProps> {
@@ -43,7 +43,7 @@ export class User extends Entity<UserProps> {
     }
 
     get role() {
-        return this.props.role
+        return this.props.role!
     }
 
     set role(role: RoleUser) {

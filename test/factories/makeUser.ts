@@ -1,4 +1,3 @@
-import { faker } from "@faker-js/faker";
 import { UniqueEntityId } from "src/core/entities/unique-entity-id";
 import { User, type UserProps } from "src/domain/report/enterprises/entities/user";
 
@@ -7,10 +6,10 @@ export function makeUser(
     id?: UniqueEntityId
 ) {
     const user = User.create({
-        name: faker.person.fullName(),
-        email: `${faker.person.firstName()}@gmail.com`,
-        password: faker.lorem.text(),
-        phone: faker.phone.number(),
+        name: 'José Almeida',
+        email: 'jose@gmail.com',
+        password: 'senha123',
+        phone: '478990789',
         role: 'COMMON',
         ...override
     }, id)

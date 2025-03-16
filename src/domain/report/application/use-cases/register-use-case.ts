@@ -10,7 +10,7 @@ export interface RegisterUseCaseRequest {
     email: string
     password: string
     phone: string
-    role: RoleUser
+    role?: RoleUser
 }
 
 export type RegisterUseCaseResponse = Either<EmailAlreadyExistsError, {}>

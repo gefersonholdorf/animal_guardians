@@ -1,0 +1,12 @@
+@baseurl=http://localhost:3322
+
+POST {{baseurl}}/users
+Content-Type: application/json
+
+{
+    "name": "Almeida Júnior",
+    "email": "almeida@gmail.com",
+    "password": "senha123",
+    "phone": "4799123456",
+    "role": "COMMON"
+}
