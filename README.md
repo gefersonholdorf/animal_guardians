@@ -1,4 +1,4 @@
-### 🛡️ Guardiões dos Animais
+## 🛡️ Guardiões dos Animais
 
 ## Descrição do Projeto
 O Guardiões dos Animais é um sistema inovador e simples, criado para permitir que qualquer pessoa denuncie maus-tratos a animais. Ele facilitará o envio de denúncias com fotos, garantindo um fluxo de informação seguro e eficiente para ONGs, autoridades e outros usuários interessados na proteção animal.
