@@ -8,5 +8,15 @@ Content-Type: application/json
     "email": "almeida@gmail.com",
     "password": "senha123",
     "phone": "4799123456",
-    "role": "COMMON"
+    "role": "COMMON"    
+}
+
+###
+
+POST {{baseurl}}/session
+Content-Type: application/json
+
+{
+    "email": "almeida@gmail.com",
+    "password": "senha123"
 }

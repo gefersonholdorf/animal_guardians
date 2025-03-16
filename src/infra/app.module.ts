@@ -5,13 +5,14 @@ import { EnvModule } from './env/env.module';
 import { CryptographyModule } from './cryptography/cryptography.module';
 import { HttpModule } from './http/http.module';
 import { DatabaseModule } from './database/database.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [ConfigModule.forRoot({
     validate: (env) => envSchema.parse(env),
     isGlobal: true
   }),
-  EnvModule, CryptographyModule, DatabaseModule, HttpModule],
+  EnvModule, CryptographyModule, DatabaseModule, HttpModule, AuthModule],
   controllers: [],
   providers: [],
 })

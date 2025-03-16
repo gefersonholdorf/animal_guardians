@@ -5,7 +5,6 @@ import { Optional } from "src/core/types/optional";
 export type RoleUser = 'COMMON' | 'MODERATOR' | 'ONG'
 
 export interface UserProps {
-    id?: UniqueEntityId
     name: string
     email: string
     password: string
@@ -60,8 +59,7 @@ export class User extends Entity<UserProps> {
             password: props.password,
             phone: props.phone,
             role: props.role ?? 'COMMON'
-        })
-
+        }, id)
         return user
     }
 }
