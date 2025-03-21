@@ -28,9 +28,7 @@ export class PrismaComplaintRepository implements ComplaintRepository{
             return null
         }
 
-        const complaintReturn = PrismaComplaintMapper.toDomain(complaint)
-
-        return complaintReturn
+        return PrismaComplaintMapper.toDomain(complaint)
     }
 
     async save(complaint: Complaint): Promise<void> {
@@ -45,12 +43,15 @@ export class PrismaComplaintRepository implements ComplaintRepository{
     }
 
     async findByUserId(userId: string, params: PaginationParams): Promise<Complaint[]> {
+        const page = Number(params.page) || 1;
+        const perPage = Number(params.perPage) || 10;
+
         const complaints = await this.prisma.complaint.findMany({
             where: {
                 userId
             },
-            take: params.perPage,
-            skip: (params.page - 1) * params.perPage
+            take: perPage,
+            skip: (page - 1) * perPage
         })
 
         const fetchComplaint = complaints.map((complaint) => {

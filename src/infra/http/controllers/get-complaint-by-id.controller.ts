@@ -30,6 +30,8 @@ export class GetComplaintByIdController {
             throw new BadRequestException()
         }
 
+        console.log(result.value.complaint)
+
         const complaint = GetComplaintByIdPresenter.toHttp(result.value.complaint)
 
         return {

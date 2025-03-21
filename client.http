@@ -27,7 +27,7 @@ POST {{baseurl}}/complaints
 Content-Type: application/json
 
 {
-    "description": "Gato abandonado",
+    "description": "Gato machucado na rua",
     "location": "Benedito Novo",
     "userId": "dc20d042-edf9-43f8-880b-427a5e49b152"
 }
@@ -39,9 +39,27 @@ Content-Type: application/json
 
 ###
 
-PUT {{baseurl}}/complaints/approved/25594f0c-37b9-4907-8b70-ccd8bbd65528
+PUT {{baseurl}}/complaints/approved/a3ca9cd2-9938-4045-aac0-0dbf1393e1ee
 Content-Type: application/json
 
 {
     "moderatorId": "dc20d042-edf9-43f8-880b-427a5e49b152"
+}
+
+###
+
+PUT {{baseurl}}/complaints/cancel/a3ca9cd2-9938-4045-aac0-0dbf1393e1ee
+Content-Type: application/json
+
+{
+    "moderatorId": "dc20d042-edf9-43f8-880b-427a5e49b152"
+}
+
+###
+
+GET {{baseurl}}/complaints?page=0&&perPage=10
+Content-Type: application/json
+
+{
+    "userId": "dc20d042-edf9-43f8-880b-427a5e49b152"
 }

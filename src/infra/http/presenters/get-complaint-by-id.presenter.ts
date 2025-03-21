@@ -10,7 +10,7 @@ export class GetComplaintByIdPresenter {
             status: complaint.props.status,
             createdAt: complaint.props.createdAt,
             userId: complaint.props.userId.toValue,
-            moderator: complaint.props.moderatorId ?? ''
+            moderator: complaint.moderatorId?.toValue ?? ''
         }
     }
 }

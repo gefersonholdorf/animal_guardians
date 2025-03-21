@@ -18,14 +18,14 @@ Maus-tratos contra animais são uma realidade comum, mas muitas vezes as denúnc
   - [ ] - Moderadores e ONGs terão permissões diferenciadas
 
 - RF-03 - Cadastro de Denúncias
-  - [ ] - Usuários devem poder cadastrar denúncias informando localização e descrição
+  - [X] - Usuários devem poder cadastrar denúncias informando localização e descrição
   - [ ] - Fotos (upload via Multer)
-  - [ ] - O status inicial da denúncia deve ser "Pendente"
-  - [ ] - A denúncia será revisada por um moderador
+  - [X] - O status inicial da denúncia deve ser "Pendente"
+  - [X] - A denúncia será revisada por um moderador
 
 - RF-04 - Moderação das Denúncias
-  - [ ] - Moderadores podem aprovar ou recusar denúncias
-  - [ ] - A decisão será registrada no histórico da denúncia
+  - [X] - Moderadores podem aprovar ou recusar denúncias
+  - [X] - A decisão será registrada no histórico da denúncia
   - [ ] - Um e-mail automático será enviado ao denunciante informando a decisão
 
 - RF-05 - Dashboard para ONGs e Autoridades

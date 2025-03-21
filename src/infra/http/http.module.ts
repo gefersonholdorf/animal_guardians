@@ -13,12 +13,16 @@ import { GetComplaintByIdUseCase } from "src/domain/report/application/use-cases
 import { GetComplaintByIdController } from "./controllers/get-complaint-by-id.controller";
 import { ApprovedComplaintUseCase } from "src/domain/report/application/use-cases/approved-complaint-use-case";
 import { ApprovedComplaintController } from "./controllers/approved-complaint.controller";
+import { FetchComplaintsByUserIdUseCase } from "src/domain/report/application/use-cases/fetch-complaints-by-user-id-use-case";
+import { FetchComplaintsByUserIdController } from "./controllers/fetch-complaints-by-user-id.controller";
+import { CancelComplaintController } from "./controllers/cancel-complaint.controller";
+import { CancelComplaintUseCase } from "src/domain/report/application/use-cases/cancel-complaint-use-case";
 
 @Module({
     imports: [DatabaseModule, CryptographyModule, AuthModule, EnvModule],
     controllers: [RegisterController, AuthenticateController, CreateComplaintController, GetComplaintByIdController,
-        ApprovedComplaintController
+        ApprovedComplaintController, FetchComplaintsByUserIdController, CancelComplaintController
     ],
-    providers: [RegisterUseCase, AuthenticateUseCase, CreateComplaintUseCase, GetComplaintByIdUseCase, ApprovedComplaintUseCase]
+    providers: [RegisterUseCase, AuthenticateUseCase, CreateComplaintUseCase, GetComplaintByIdUseCase, ApprovedComplaintUseCase, FetchComplaintsByUserIdUseCase, CancelComplaintUseCase]
 })
 export class HttpModule{}

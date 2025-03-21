@@ -81,7 +81,7 @@ export class Complaint extends Entity<ComplaintProps> {
             location: props.location,
             status: props.status ?? 'PENDING',
             userId: props.userId,
-            moderatorId: null,
+            moderatorId: props.moderatorId ?? null,
             createdAt: props.createdAt ?? new Date(),
             updatedAt: props.updatedAt ?? new Date()
         }, id ?? new UniqueEntityId())

@@ -4,7 +4,7 @@ import { Complaint } from "src/domain/report/enterprises/entities/complaint";
 
 export class PrismaComplaintMapper {
     static toDomain(complaint: PrismaComplaint): Complaint {
-        return Complaint.create({
+        const newComplaint = Complaint.create({
             description: complaint.description,
             location: complaint.location,
             status: complaint.status,
@@ -12,7 +12,9 @@ export class PrismaComplaintMapper {
             moderatorId: complaint.moderatorId ? new UniqueEntityId(complaint.moderatorId) : null,
             createdAt: complaint.createdAt,
             updatedAt: complaint.updatedAt
-        }, new UniqueEntityId(complaint.id))
+        }, new UniqueEntityId(complaint.id));
+
+        return newComplaint
     }
 
     static toPrisma(complaint: Complaint): Prisma.ComplaintUncheckedCreateInput {

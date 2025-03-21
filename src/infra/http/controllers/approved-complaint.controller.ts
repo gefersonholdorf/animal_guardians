@@ -16,10 +16,9 @@ export class ApprovedComplaintController {
     constructor(private readonly approvedComplaintService: ApprovedComplaintUseCase) {}
 
     @Put('/approved/:complaintId')
-    // @UsePipes(new ZodValidationPipe(approvedComplaintSchema))
-    @HttpCode(201)
-    async handler(@Param('complaintId') complaintId: string, @Body() body: any) {
-        const {moderatorId} = body
+    @HttpCode(204)
+    async handler(@Param('complaintId') complaintId: string, @Body() body: ApprovedComplaintSchema) {
+        const {moderatorId} = approvedComplaintSchema.parse(body)
 
         const result = await this.approvedComplaintService.execute({complaintId, moderatorId})
 
