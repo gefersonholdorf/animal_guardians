@@ -1,6 +1,7 @@
-import { Entity } from "src/core/entities/entity";
+import { AggregateRoot } from "src/core/entities/aggregate-root";
 import { UniqueEntityId } from "src/core/entities/unique-entity-id";
 import { Optional } from "src/core/types/optional";
+import { UserCreatedEvent } from "../events/user-created-event";
 
 export type RoleUser = 'COMMON' | 'MODERATOR' | 'ONG'
 
@@ -12,7 +13,7 @@ export interface UserProps {
     role?: RoleUser
 }
 
-export class User extends Entity<UserProps> {
+export class User extends AggregateRoot<UserProps> {
     get name() {
         return this.props.name
     }
@@ -60,6 +61,13 @@ export class User extends Entity<UserProps> {
             phone: props.phone,
             role: props.role ?? 'COMMON'
         }, id)
+
+        if(!id) {
+            user.addDomainEvent(new UserCreatedEvent(user))
+            console.log(user.domainEvents)
+            console.log('Adicionado' + user.id.toValue)
+        }
+
         return user
     }
 }

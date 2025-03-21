@@ -28,5 +28,33 @@ model User {
 
   role RoleUser
 
+  complaint Complaint[] @relation("moderator")
+
+  Complaint Complaint[] @relation(name: "user")
+
   @@map("users")
+}
+
+enum StatusComplaints {
+  PENDING
+  CANCEL
+  APPROVED
+}
+
+model Complaint {
+  id String @id @default(uuid())
+
+  description String
+  location String
+  status StatusComplaints
+  userId String @map("user_id")
+  moderatorId String? @map("moderator_id")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt() @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], name: "user")
+
+  moderator User? @relation(fields: [moderatorId], references: [id], name: "moderator")
+
+  @@map("complaints")
 }

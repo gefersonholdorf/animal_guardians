@@ -20,3 +20,28 @@ Content-Type: application/json
     "email": "almeida@gmail.com",
     "password": "senha123"
 }
+
+###
+
+POST {{baseurl}}/complaints
+Content-Type: application/json
+
+{
+    "description": "Gato abandonado",
+    "location": "Benedito Novo",
+    "userId": "dc20d042-edf9-43f8-880b-427a5e49b152"
+}
+
+###
+
+GET {{baseurl}}/complaints/25594f0c-37b9-4907-8b70-ccd8bbd655283
+Content-Type: application/json
+
+###
+
+PATCH {{baseurl}}/complaints/approved/25594f0c-37b9-4907-8b70-ccd8bbd655287
+Content-Type: application/json
+
+{
+    "moderatorId": "dc20d042-edf9-43f8-880b-427a5e49b152"
+}

@@ -15,7 +15,7 @@ let hashed: FakeHashed
 let encrypter: FakeEncrypter
 let sut: AuthenticateUseCase
 
-describe('Register User [UNIT]', () => {
+describe('Authenticate User [UNIT]', () => {
     beforeEach(() => {
         inMemoryUserRepository = new InMemoryUserRepository()
         hashed = new FakeHashed()

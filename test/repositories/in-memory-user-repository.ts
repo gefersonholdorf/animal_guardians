@@ -1,3 +1,4 @@
+import { DomainEvents } from "src/core/events/domain-events";
 import { UserRepository } from "src/domain/report/application/repositories/user-repository";
 import { User } from "src/domain/report/enterprises/entities/user";
 
@@ -5,7 +6,11 @@ export class InMemoryUserRepository implements UserRepository {
     public items: User[] = []
 
     async create(user: User): Promise<void> {
-        this.items.push(user)
+        await this.items.push(user)
+
+        await DomainEvents.dispatchEventsForAggregate(user.id)
+        console.log(user.domainEvents)
+        console.log(user.id.toValue)
     }
 
     async findByEmail(email: string): Promise<User | null> {
