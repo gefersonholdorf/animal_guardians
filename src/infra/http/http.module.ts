@@ -12,12 +12,12 @@ import { CreateComplaintUseCase } from "src/domain/report/application/use-cases/
 import { GetComplaintByIdUseCase } from "src/domain/report/application/use-cases/get-complaint-by-id-use-case";
 import { GetComplaintByIdController } from "./controllers/get-complaint-by-id.controller";
 import { ApprovedComplaintUseCase } from "src/domain/report/application/use-cases/approved-complaint-use-case";
-import { approvedComplaintController } from "./controllers/approved-complaint.controller";
+import { ApprovedComplaintController } from "./controllers/approved-complaint.controller";
 
 @Module({
     imports: [DatabaseModule, CryptographyModule, AuthModule, EnvModule],
     controllers: [RegisterController, AuthenticateController, CreateComplaintController, GetComplaintByIdController,
-        approvedComplaintController
+        ApprovedComplaintController
     ],
     providers: [RegisterUseCase, AuthenticateUseCase, CreateComplaintUseCase, GetComplaintByIdUseCase, ApprovedComplaintUseCase]
 })

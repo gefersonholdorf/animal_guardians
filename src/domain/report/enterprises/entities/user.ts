@@ -64,8 +64,6 @@ export class User extends AggregateRoot<UserProps> {
 
         if(!id) {
             user.addDomainEvent(new UserCreatedEvent(user))
-            console.log(user.domainEvents)
-            console.log('Adicionado' + user.id.toValue)
         }
 
         return user

@@ -34,12 +34,12 @@ Content-Type: application/json
 
 ###
 
-GET {{baseurl}}/complaints/25594f0c-37b9-4907-8b70-ccd8bbd655283
+GET {{baseurl}}/complaints/25594f0c-37b9-4907-8b70-ccd8bbd65528
 Content-Type: application/json
 
 ###
 
-PATCH {{baseurl}}/complaints/approved/25594f0c-37b9-4907-8b70-ccd8bbd655287
+PUT {{baseurl}}/complaints/approved/25594f0c-37b9-4907-8b70-ccd8bbd65528
 Content-Type: application/json
 
 {

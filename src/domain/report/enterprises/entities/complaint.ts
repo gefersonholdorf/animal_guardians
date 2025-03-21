@@ -1,3 +1,4 @@
+import { randomUUID } from "node:crypto";
 import { Entity } from "src/core/entities/entity";
 import { UniqueEntityId } from "src/core/entities/unique-entity-id";
 import { Optional } from "src/core/types/optional";
@@ -83,7 +84,7 @@ export class Complaint extends Entity<ComplaintProps> {
             moderatorId: null,
             createdAt: props.createdAt ?? new Date(),
             updatedAt: props.updatedAt ?? new Date()
-        }, id)
+        }, id ?? new UniqueEntityId())
 
         return complait
     }

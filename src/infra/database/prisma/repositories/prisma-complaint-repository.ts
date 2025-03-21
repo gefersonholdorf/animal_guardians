@@ -28,7 +28,9 @@ export class PrismaComplaintRepository implements ComplaintRepository{
             return null
         }
 
-        return PrismaComplaintMapper.toDomain(complaint)
+        const complaintReturn = PrismaComplaintMapper.toDomain(complaint)
+
+        return complaintReturn
     }
 
     async save(complaint: Complaint): Promise<void> {
